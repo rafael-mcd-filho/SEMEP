@@ -7,26 +7,6 @@ const waHref = (message = "Olá! Vim pelo site da SEMEP e gostaria de atendiment
 const SEMEPLogoSrc = "/assets/logos/LOGOTIPO SEMEP SAÚDE.png";
 const SEMEPLogoHorizontalSrc = "/assets/logos/logo-semep-horizontal.png";
 
-const injectBaseFonts = () => {
-  if (document.getElementById("semep-fonts")) return;
-
-  const style = document.createElement("style");
-  style.id = "semep-fonts";
-  style.textContent = `
-    @font-face{font-family:"Raleway";src:url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap}
-    @font-face{font-family:"Raleway";src:url("/assets/fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");font-weight:100 900;font-style:italic;font-display:swap}
-    @font-face{font-family:"Playfair Display";src:url("/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");font-weight:400 900;font-style:normal;font-display:swap}
-    @font-face{font-family:"Playfair Display";src:url("/assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");font-weight:400 900;font-style:italic;font-display:swap}
-    :root{--font-serif:"Playfair Display",Georgia,serif;--font-sans:"Raleway",system-ui,sans-serif}
-    body{font-family:var(--font-sans)}
-    .font-serif{font-family:var(--font-serif)!important}
-    .font-sans{font-family:var(--font-sans)!important}
-  `;
-  document.head.appendChild(style);
-};
-
-injectBaseFonts();
-
 const convenioKey = (name = "") =>
   name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 

@@ -8,8 +8,8 @@ const injectSharedStyles = () => {
   s.textContent = `
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scrollbar-gutter:stable}
-    body{overflow-x:hidden;font-family:"Raleway",system-ui,sans-serif}
-    :root{--font-serif:"Playfair Display",Georgia,serif;--font-sans:"Raleway",system-ui,sans-serif}
+    body{overflow-x:hidden;font-family:"Inter",system-ui,sans-serif}
+    :root{--font-serif:"Source Serif 4",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif}
     .font-serif{font-family:var(--font-serif)!important}
     .font-sans{font-family:var(--font-sans)!important}
 
@@ -58,22 +58,22 @@ const injectSharedStyles = () => {
     .tl-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .tubelight-pill{display:none;align-items:center;gap:2px;background:rgba(14,42,71,.04);border:1px solid rgba(14,42,71,.08);padding:5px;border-radius:9999px;box-shadow:0 4px 24px rgba(14,42,71,.06)}
     @media (min-width:1280px){.tubelight-pill{display:flex}}
-    .tubelight-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:9999px;font-size:13px;font-weight:600;color:rgba(14,42,71,.6);text-decoration:none;transition:color .2s;font-family:"Raleway",sans-serif;white-space:nowrap}
+    .tubelight-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:9999px;font-size:13px;font-weight:600;color:rgba(14,42,71,.6);text-decoration:none;transition:color .2s;font-family:"Inter",sans-serif;white-space:nowrap}
     .tubelight-link:hover{color:rgba(14,42,71,.95)}
     .tubelight-link.tl-active{color:white;background:rgba(30,73,118,.95)}
     .tubelight-link.tl-active::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:40px;height:3px;background:#6EC9E0;border-radius:0 0 4px 4px;box-shadow:0 0 8px 2px rgba(110,201,224,.7),0 0 20px 4px rgba(110,201,224,.35),0 0 40px 8px rgba(110,201,224,.15)}
     .tubelight-link.tl-active::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:20px;background:radial-gradient(ellipse at top,rgba(110,201,224,.22) 0%,transparent 70%);border-radius:50%}
     .tl-dropdown{position:relative}
     .tl-drop-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:white;border-radius:16px;box-shadow:0 8px 40px rgba(14,42,71,.14);border:1px solid rgba(14,42,71,.07);padding:6px;min-width:200px;z-index:200}
-    .tl-drop-item{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:#1A2937;text-decoration:none;border-radius:10px;transition:background .15s,color .15s;font-family:"Raleway",sans-serif}
+    .tl-drop-item{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:#1A2937;text-decoration:none;border-radius:10px;transition:background .15s,color .15s;font-family:"Inter",sans-serif}
     .tl-drop-item:hover{background:#F4F8FB;color:#0E2A47}
     .tl-mobile-overlay{position:fixed;inset:0;background:#0E2A47;z-index:500;display:flex;flex-direction:column;padding:14px 24px 28px;overflow-y:auto;overscroll-behavior:contain;animation:menuFade .16s ease-out both}
     @keyframes menuFade{from{opacity:0}to{opacity:1}}
-    .tl-mobile-link{font-family:"Playfair Display",Georgia,serif;font-size:28px;font-weight:600;color:white;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block;transition:color .2s}
+    .tl-mobile-link{font-family:"Source Serif 4",Georgia,serif;font-size:28px;font-weight:600;color:white;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block;transition:color .2s}
     .tl-mobile-link:hover{color:#6EC9E0}
 
     /* Neon buttons */
-    .neon-btn{position:relative;display:inline-flex;align-items:center;font-family:"Raleway",sans-serif;font-weight:600;border-radius:9999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap;overflow:hidden;transition:padding .5s cubic-bezier(.4,0,.2,1),background .25s ease,border-color .25s ease}
+    .neon-btn{position:relative;display:inline-flex;align-items:center;font-family:"Inter",sans-serif;font-weight:600;border-radius:9999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap;overflow:hidden;transition:padding .5s cubic-bezier(.4,0,.2,1),background .25s ease,border-color .25s ease}
     .neon-btn.neon-block{display:flex;width:100%;justify-content:center}
     .neon-btn .btn-text{position:relative;z-index:1;pointer-events:none;display:inline-flex;align-items:center;gap:7px}
     .neon-btn .btn-circle{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:right .5s cubic-bezier(.4,0,.2,1)}
