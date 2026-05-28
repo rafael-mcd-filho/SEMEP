@@ -1,0 +1,35 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect direct .html access to clean URLs.
+  RewriteRule ^index\.html$ / [R=301,L,NC]
+  RewriteRule ^Atendimento-Adulto\.html$ /atendimento-adulto [R=301,L,NC]
+  RewriteRule ^Atendimento-Infantil\.html$ /atendimento-infantil [R=301,L,NC]
+  RewriteRule ^Equipe\.html$ /equipe [R=301,L,NC]
+  RewriteRule ^Fonoaudiologia\.html$ /fonoaudiologia [R=301,L,NC]
+  RewriteRule ^LGPD\.html$ /lgpd [R=301,L,NC]
+  RewriteRule ^Neuropsicologia\.html$ /neuropsicologia [R=301,L,NC]
+  RewriteRule ^Nutricao\.html$ /nutricao [R=301,L,NC]
+  RewriteRule ^Politica-de-Privacidade\.html$ /politica-de-privacidade [R=301,L,NC]
+  RewriteRule ^Psicologia\.html$ /psicologia [R=301,L,NC]
+  RewriteRule ^Psiquiatria\.html$ /psiquiatria [R=301,L,NC]
+  RewriteRule ^Sobre\.html$ /sobre [R=301,L,NC]
+  RewriteRule ^Termos-de-Uso\.html$ /termos-de-uso [R=301,L,NC]
+
+  # Serve clean URLs from their corresponding HTML files.
+  RewriteRule ^atendimento-adulto/?$ Atendimento-Adulto.html [L]
+  RewriteRule ^atendimento-infantil/?$ Atendimento-Infantil.html [L]
+  RewriteRule ^equipe/?$ Equipe.html [L]
+  RewriteRule ^fonoaudiologia/?$ Fonoaudiologia.html [L]
+  RewriteRule ^lgpd/?$ LGPD.html [L]
+  RewriteRule ^neuropsicologia/?$ Neuropsicologia.html [L]
+  RewriteRule ^nutricao/?$ Nutricao.html [L]
+  RewriteRule ^politica-de-privacidade/?$ Politica-de-Privacidade.html [L]
+  RewriteRule ^psicologia/?$ Psicologia.html [L]
+  RewriteRule ^psiquiatria/?$ Psiquiatria.html [L]
+  RewriteRule ^sobre/?$ Sobre.html [L]
+  RewriteRule ^termos-de-uso/?$ Termos-de-Uso.html [L]
+</IfModule>
