@@ -16,7 +16,7 @@ const HeroAdulto = () => (
             Psiquiatria, psicologia, nutrição e neuropsicologia — equipe especializada para acolher o adulto em sua complexidade.
           </p>
           <div className="flex flex-wrap gap-4">
-            <WaButton size="lg" message="Olá! Tenho interesse no atendimento adulto da SEMEP.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="hero__agendar" size="lg" message="Olá! Tenho interesse no atendimento adulto da SEMEP.">Falar no WhatsApp</WaButton>
             <NeonBtn href="#especialidades-adulto" variant="ghost" size="lg">Ver especialidades adultas</NeonBtn>
           </div>
         </div>
@@ -126,7 +126,7 @@ const ConveniosAdultoSection = () => (
       </div>
       <p className="text-txt-sec text-[13px] mb-8 max-w-xl mx-auto">A cobertura pode variar por categoria do plano e especialidade. Algumas especialidades podem requerer encaminhamento.</p>
       <div className="reveal">
-        <WaButton size="lg" message="Olá! Gostaria de confirmar a cobertura do meu plano para atendimento adulto na SEMEP.">Confirmar cobertura do meu plano</WaButton>
+        <WaButton trackingId="convenios__confirmar-cobertura" size="lg" message="Olá! Gostaria de confirmar a cobertura do meu plano para atendimento adulto na SEMEP.">Confirmar cobertura do meu plano</WaButton>
       </div>
     </div>
   </section>

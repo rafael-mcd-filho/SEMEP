@@ -175,7 +175,7 @@ const FAQ = () => {
         </div>
         <div className="text-center reveal">
           <p className="text-txt-sec text-sm mb-4">Não encontrou sua dúvida?</p>
-          <WaButton size="lg" message="Olá! Tenho uma dúvida e gostaria de falar com a equipe da SEMEP.">Falar com a equipe da SEMEP</WaButton>
+          <WaButton trackingId="faq__tirar-duvidas" size="lg" message="Olá! Tenho uma dúvida e gostaria de falar com a equipe da SEMEP.">Falar com a equipe da SEMEP</WaButton>
         </div>
       </div>
     </section>
@@ -239,7 +239,7 @@ const Contato = () => (
 
           </div>
 
-          <WaButton size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de atendimento.">Falar no WhatsApp agora</WaButton>
+          <WaButton trackingId="contato__falar-no-whatsapp" size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de atendimento.">Falar no WhatsApp agora</WaButton>
         </div>
 
       </div>
@@ -306,7 +306,7 @@ const Footer = () => (
         <div>
           <div className="text-[11px] font-bold uppercase tracking-widest text-white/40 mb-4">Contato</div>
           <div className="space-y-3">
-            <a href={waHref("Olá! Vim pelo site da SEMEP e gostaria de atendimento.")} target="_blank" rel="noopener noreferrer"
+            <a href={waHref("Olá! Vim pelo site da SEMEP e gostaria de atendimento.")} data-whatsapp-id="rodape__telefone-whatsapp" target="_blank" rel="noopener noreferrer"
                className="flex items-center gap-2 text-[13px] text-wa hover:text-[#5edc9e] transition-colors">
               <Ic.WhatsApp size={15} /> (83) 3340-3562
             </a>

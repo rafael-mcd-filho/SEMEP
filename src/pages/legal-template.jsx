@@ -227,7 +227,7 @@ const LegalApp = () => {
           {/* Footer note */}
           <div className="reveal mt-14 pt-10 border-t border-divider text-center">
             <p className="text-txt-sec text-[13px] mb-5">Dúvidas sobre este documento? Fale com nossa equipe.</p>
-            <WaButton size="md" message="Olá! Tenho uma dúvida sobre as informações legais da SEMEP.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="documento-legal__tirar-duvidas" size="md" message="Olá! Tenho uma dúvida sobre as informações legais da SEMEP.">Falar no WhatsApp</WaButton>
           </div>
         </div>
       </section>

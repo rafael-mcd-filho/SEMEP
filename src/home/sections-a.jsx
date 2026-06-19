@@ -123,7 +123,7 @@ const Header = () => {
           {/* Right actions */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <div className="hidden xl:block">
-              <WaButton size="md" message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
+              <WaButton trackingId="cabecalho-desktop__agendar" size="md" message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
             </div>
             {/* Hamburger */}
             <button
@@ -172,7 +172,7 @@ const Header = () => {
 
           {/* Bottom CTA */}
           <div className="mt-10">
-            <WaButton size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="menu-mobile__agendar" size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
           </div>
         </div>
       )}
@@ -203,7 +203,7 @@ const Hero = () => (
             para crianças, adolescentes e adultos.
           </p>
           <div className="flex flex-wrap gap-4">
-            <WaButton size="lg" message="Olá! Gostaria de agendar uma consulta na SEMEP.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="hero__agendar" size="lg" message="Olá! Gostaria de agendar uma consulta na SEMEP.">Falar no WhatsApp</WaButton>
             <NeonBtn href="#especialidades" variant="ghost" size="lg">
               Nossas especialidades
             </NeonBtn>
@@ -347,7 +347,7 @@ const Sobre = () => (
 
           <div className="flex flex-wrap gap-4">
             <NeonBtn href="/sobre" variant="default" size="lg">Saiba mais sobre a SEMEP →</NeonBtn>
-            <WaButton size="lg" message="Olá! Gostaria de saber mais sobre os atendimentos da SEMEP.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="sobre__informacoes" size="lg" message="Olá! Gostaria de saber mais sobre os atendimentos da SEMEP.">Falar no WhatsApp</WaButton>
           </div>
         </div>
       </div>

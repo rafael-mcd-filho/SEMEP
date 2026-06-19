@@ -295,7 +295,7 @@ const SharedHeader = () => {
 
           <div className="flex items-center gap-3 flex-shrink-0">
             <div className="hidden xl:block">
-              <WaButton size="md" message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
+              <WaButton trackingId="cabecalho-desktop__agendar" size="md" message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton>
             </div>
             <button onClick={() => setMobileOpen(true)} className="xl:hidden p-2 rounded-xl text-brand hover:bg-surface transition-colors" aria-label="Menu">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
@@ -319,7 +319,7 @@ const SharedHeader = () => {
               <a key={label} href={href} className="tl-mobile-link">{label}</a>
             ))}
           </div>
-          <div className="mt-10"><WaButton size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton></div>
+          <div className="mt-10"><WaButton trackingId="menu-mobile__agendar" size="lg" block message="Olá! Vim pelo site da SEMEP e gostaria de agendar uma consulta.">Falar no WhatsApp</WaButton></div>
         </div>
       )}
     </>
@@ -356,7 +356,7 @@ const SharedFooter = () => (
         <div>
           <div className="text-[11px] font-bold uppercase tracking-widest text-white/40 mb-4">Contato</div>
           <div className="space-y-3">
-            <a href={waHref("Olá! Vim pelo site da SEMEP e gostaria de atendimento.")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-wa hover:text-[#5edc9e] transition-colors"><Ic.WhatsApp size={15}/>(83) 3340-3562</a>
+            <a href={waHref("Olá! Vim pelo site da SEMEP e gostaria de atendimento.")} data-whatsapp-id="rodape__telefone-whatsapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-wa hover:text-[#5edc9e] transition-colors"><Ic.WhatsApp size={15}/>(83) 3340-3562</a>
             <div className="text-[13px] text-white/60">(83) 3506-4224</div>
             <div className="text-[13px] text-white/60">(83) 3506-4227</div>
             <div className="flex gap-3 mt-4">
@@ -434,7 +434,7 @@ const SharedFaqSection = ({ badge, title, subtitle, items, bg = 'surface', waLab
         </div>
         {waMsg && (
           <div className="text-center reveal">
-            <WaButton size="lg" message={waMsg}>{waLabel || 'Falar no WhatsApp'}</WaButton>
+            <WaButton trackingId="faq__tirar-duvidas" size="lg" message={waMsg}>{waLabel || 'Falar no WhatsApp'}</WaButton>
           </div>
         )}
       </div>
@@ -465,7 +465,7 @@ const InnerCTA = ({ h2, subtitle, waMsg, waLabel = 'Falar no WhatsApp', ghostHre
       <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white mb-4">{h2}</h2>
       <p className="text-white/75 text-lg mb-10 leading-relaxed">{subtitle}</p>
       <div className="flex flex-wrap gap-4 justify-center">
-        <WaButton size="lg" message={waMsg || "Olá! Vim pelo site da SEMEP e gostaria de atendimento."}>{waLabel}</WaButton>
+        <WaButton trackingId="cta-final__falar-no-whatsapp" size="lg" message={waMsg || "Olá! Vim pelo site da SEMEP e gostaria de atendimento."}>{waLabel}</WaButton>
         {ghostHref && ghostLabel && (
           <NeonBtn href={ghostHref} variant="ghost-white" size="lg">{ghostLabel}</NeonBtn>
         )}

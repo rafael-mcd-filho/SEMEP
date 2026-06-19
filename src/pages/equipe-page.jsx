@@ -1,16 +1,16 @@
 // ── SEMEP · Página Equipe ─────────────────────────────────────────────────────
 
 const TEAM_FULL = [
-  { name:'Dr. Rômulo Antônio',     role:'Psiquiatria',            reg:'CRM/PB 3442 · RQE 5994', img:'photo-1612349317150-e413f6a5b16d', publico:['adulto'],            esp:'Psiquiatria',   bio:'Psiquiatra com experiência em transtornos de humor, ansiedade e acompanhamento medicamentoso responsável.' },
-  { name:'Dra. Carla Medeiros',    role:'Psicologia Clínica',     reg:'CRP 13/0847',             img:'photo-1438761681033-6461ffad8d80', publico:['infantil','adulto'], esp:'Psicologia',    bio:'Psicóloga com formação em TCC, atua com adultos e crianças em diferentes momentos da vida.' },
-  { name:'Dr. Felipe Torres',      role:'Psiquiatria Infantil',   reg:'CRM/PB 5118 · RQE 7203',  img:'photo-1506794778202-cad84cf45f1d', publico:['infantil'],          esp:'Psiquiatria',   bio:'Psiquiatra da infância e adolescência, com especialização em TDAH e quadros do desenvolvimento.' },
-  { name:'Dra. Ana Beatriz Silva', role:'Fonoaudiologia',         reg:'CRFa/PB 2241',            img:'photo-1544005313-94ddf0286df2', publico:['infantil'],          esp:'Fonoaudiologia',bio:'Fonoaudióloga especializada no desenvolvimento infantil da linguagem oral e escrita.' },
-  { name:'Dra. Mariana Costa',     role:'Nutrição',               reg:'CRN/PB 9034',             img:'photo-1494790108377-be9c29b29330', publico:['adulto'],            esp:'Nutrição',      bio:'Nutricionista com foco em nutrição comportamental e relação alimentação-saúde mental.' },
-  { name:'Dr. Lucas Araújo',       role:'Neuropsicologia',        reg:'CRP 13/1562',             img:'photo-1472099645785-5658abf4ff4e', publico:['infantil','adulto'], esp:'Neuropsicologia',bio:'Neuropsicólogo com experiência em avaliação cognitiva de TEA, TDAH e quadros do desenvolvimento.' },
-  { name:'Dra. [Psicopedagoga]',   role:'Psicopedagogia',         reg:'CRPP/PB —',               img:'photo-1438761681033-6461ffad8d80', publico:['infantil'],          esp:'Psicopedagogia',bio:'[Bio a confirmar com a clínica]' },
-  { name:'Dra. [Terapeuta Ocup.]', role:'Terapia Ocupacional',    reg:'CREFITO/PB —',            img:'photo-1573496359142-b8d87734a5a2', publico:['infantil'],          esp:'ABA',           bio:'[Bio a confirmar com a clínica]' },
-  { name:'Dr. [Analista ABA]',     role:'ABA — Análise do Comp.', reg:'CRP 13/—',               img:'photo-1535713875002-d1d0cf377fde', publico:['infantil'],          esp:'ABA',           bio:'[Bio a confirmar com a clínica]' },
-  { name:'Dra. [Psicóloga]',       role:'Psicologia',             reg:'CRP 13/—',                img:'photo-1607746882042-944635dfe10e', publico:['adulto'],            esp:'Psicologia',    bio:'[Bio a confirmar com a clínica]' },
+  { name:'Dr. Rômulo Antônio',     trackingId:'dr-romulo-antonio',     role:'Psiquiatria',            reg:'CRM/PB 3442 · RQE 5994', img:'photo-1612349317150-e413f6a5b16d', publico:['adulto'],            esp:'Psiquiatria',   bio:'Psiquiatra com experiência em transtornos de humor, ansiedade e acompanhamento medicamentoso responsável.' },
+  { name:'Dra. Carla Medeiros',    trackingId:'dra-carla-medeiros',    role:'Psicologia Clínica',     reg:'CRP 13/0847',             img:'photo-1438761681033-6461ffad8d80', publico:['infantil','adulto'], esp:'Psicologia',    bio:'Psicóloga com formação em TCC, atua com adultos e crianças em diferentes momentos da vida.' },
+  { name:'Dr. Felipe Torres',      trackingId:'dr-felipe-torres',      role:'Psiquiatria Infantil',   reg:'CRM/PB 5118 · RQE 7203',  img:'photo-1506794778202-cad84cf45f1d', publico:['infantil'],          esp:'Psiquiatria',   bio:'Psiquiatra da infância e adolescência, com especialização em TDAH e quadros do desenvolvimento.' },
+  { name:'Dra. Ana Beatriz Silva', trackingId:'dra-ana-beatriz-silva', role:'Fonoaudiologia',         reg:'CRFa/PB 2241',            img:'photo-1544005313-94ddf0286df2', publico:['infantil'],          esp:'Fonoaudiologia',bio:'Fonoaudióloga especializada no desenvolvimento infantil da linguagem oral e escrita.' },
+  { name:'Dra. Mariana Costa',     trackingId:'dra-mariana-costa',     role:'Nutrição',               reg:'CRN/PB 9034',             img:'photo-1494790108377-be9c29b29330', publico:['adulto'],            esp:'Nutrição',      bio:'Nutricionista com foco em nutrição comportamental e relação alimentação-saúde mental.' },
+  { name:'Dr. Lucas Araújo',       trackingId:'dr-lucas-araujo',       role:'Neuropsicologia',        reg:'CRP 13/1562',             img:'photo-1472099645785-5658abf4ff4e', publico:['infantil','adulto'], esp:'Neuropsicologia',bio:'Neuropsicólogo com experiência em avaliação cognitiva de TEA, TDAH e quadros do desenvolvimento.' },
+  { name:'Dra. [Psicopedagoga]',   trackingId:'psicopedagogia',        role:'Psicopedagogia',         reg:'CRPP/PB —',               img:'photo-1438761681033-6461ffad8d80', publico:['infantil'],          esp:'Psicopedagogia',bio:'[Bio a confirmar com a clínica]' },
+  { name:'Dra. [Terapeuta Ocup.]', trackingId:'terapeuta-ocupacional', role:'Terapia Ocupacional',    reg:'CREFITO/PB —',            img:'photo-1573496359142-b8d87734a5a2', publico:['infantil'],          esp:'ABA',           bio:'[Bio a confirmar com a clínica]' },
+  { name:'Dr. [Analista ABA]',     trackingId:'analista-aba',           role:'ABA — Análise do Comp.', reg:'CRP 13/—',               img:'photo-1535713875002-d1d0cf377fde', publico:['infantil'],          esp:'ABA',           bio:'[Bio a confirmar com a clínica]' },
+  { name:'Dra. [Psicóloga]',       trackingId:'psicologia-adulto',      role:'Psicologia',             reg:'CRP 13/—',                img:'photo-1607746882042-944635dfe10e', publico:['adulto'],            esp:'Psicologia',    bio:'[Bio a confirmar com a clínica]' },
 ];
 
 const ESPECIALIDADES_FILTRO = ['Todas','Psiquiatria','Psicologia','Fonoaudiologia','Nutrição','Neuropsicologia','Psicopedagogia','Terapia Ocupacional','ABA'];
@@ -98,7 +98,7 @@ const EquipeGrid = () => {
                       ))}
                     </div>
                     <p className="text-txt-sec text-[11px] leading-relaxed mb-3 flex-1">{doc.bio}</p>
-                    <NeonBtn href={waHref('Olá! Gostaria de agendar com ' + doc.name)} variant="default" size="md" className="text-[11px]">Agendar</NeonBtn>
+                    <NeonBtn trackingId={`profissionais__agendar-${doc.trackingId}`} href={waHref('Olá! Gostaria de agendar com ' + doc.name)} variant="default" size="md" className="text-[11px]">Agendar</NeonBtn>
                   </div>
                 </div>
               ))}
@@ -122,7 +122,7 @@ const QueroFazerParteSection = () => (
           <Badge className="bg-brand/10 text-brand mb-5">Oportunidades</Badge>
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-brand mb-5">Você é profissional? Junte-se à nossa equipe.</h2>
           <p className="text-txt-sec text-[15px] leading-relaxed mb-7">Estamos sempre em busca de profissionais qualificados que compartilhem nosso compromisso com o cuidado humano e técnico em saúde mental.</p>
-          <NeonBtn href={waHref("Olá! Sou profissional de saúde e gostaria de enviar meu currículo à SEMEP.")} variant="default" size="lg">Enviar currículo</NeonBtn>
+          <NeonBtn trackingId="oportunidades__enviar-curriculo" href={waHref("Olá! Sou profissional de saúde e gostaria de enviar meu currículo à SEMEP.")} variant="default" size="lg">Enviar currículo</NeonBtn>
         </div>
       </div>
     </div>

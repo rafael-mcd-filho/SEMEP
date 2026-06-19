@@ -130,6 +130,7 @@ const AtendimentoCard = ({ type }) => {
           <WaButton
             block
             className="text-[13px]"
+            trackingId={isInfantil ? "publico-infantil__informacoes" : "publico-adulto__informacoes"}
             message={isInfantil
               ? "Olá! Gostaria de informações sobre atendimento infantil e adolescente na SEMEP."
               : "Olá! Gostaria de informações sobre atendimento adulto na SEMEP."}
@@ -208,7 +209,7 @@ const ComoFunciona = () => (
       </div>
 
       <div className="text-center reveal">
-        <WaButton size="lg" message="Olá! Gostaria de iniciar meu atendimento na SEMEP.">Iniciar meu atendimento no WhatsApp</WaButton>
+        <WaButton trackingId="como-funciona__iniciar-atendimento" size="lg" message="Olá! Gostaria de iniciar meu atendimento na SEMEP.">Iniciar meu atendimento no WhatsApp</WaButton>
       </div>
     </div>
   </section>
@@ -244,7 +245,7 @@ const Convenios = () => (
       </p>
 
       <div className="reveal">
-        <WaButton size="lg" message="Olá! Gostaria de confirmar a cobertura do meu convênio na SEMEP.">Confirmar minha cobertura no WhatsApp</WaButton>
+        <WaButton trackingId="convenios__confirmar-cobertura" size="lg" message="Olá! Gostaria de confirmar a cobertura do meu convênio na SEMEP.">Confirmar minha cobertura no WhatsApp</WaButton>
       </div>
     </div>
   </section>

@@ -113,7 +113,7 @@ const EspHero = () => (
           <h1 className="font-serif text-[36px] lg:text-[50px] font-bold text-brand leading-tight mb-5">{cfg.nome} em João Pessoa</h1>
           <p className="text-txt-sec text-lg leading-relaxed mb-8 max-w-lg">{cfg.descCurta}</p>
           <div className="flex flex-wrap gap-4">
-            <WaButton size="lg" message={cfg.ctaMsg}>Falar no WhatsApp</WaButton>
+            <WaButton trackingId="hero__agendar" size="lg" message={cfg.ctaMsg}>Falar no WhatsApp</WaButton>
           </div>
         </div>
         <div className="relative flex justify-center reveal reveal-d2">
@@ -229,7 +229,7 @@ const ConveniosEspSection = () => (
         ))}
       </div>
       <div className="reveal">
-        <WaButton size="lg" message={'Olá! Gostaria de confirmar minha cobertura para ' + cfg.nome + ' na SEMEP.'}>Confirmar minha cobertura</WaButton>
+        <WaButton trackingId="convenios__confirmar-cobertura" size="lg" message={'Olá! Gostaria de confirmar minha cobertura para ' + cfg.nome + ' na SEMEP.'}>Confirmar minha cobertura</WaButton>
       </div>
     </div>
   </section>

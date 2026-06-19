@@ -15,7 +15,7 @@ const HeroInfantil = () => (
             Equipe multidisciplinar dedicada a crianças e adolescentes — com abordagem ABA para TEA, psicomotricidade, psicopedagogia e mais.
           </p>
           <div className="flex flex-wrap gap-4">
-            <WaButton size="lg" message="Olá! Tenho interesse no atendimento infantil da SEMEP.">Falar no WhatsApp</WaButton>
+            <WaButton trackingId="hero__agendar" size="lg" message="Olá! Tenho interesse no atendimento infantil da SEMEP.">Falar no WhatsApp</WaButton>
             <NeonBtn href="#especialidades-infantil" variant="ghost" size="lg">Ver especialidades infantis</NeonBtn>
           </div>
         </div>
@@ -115,7 +115,7 @@ const EspecialidadesInfantilSection = () => (
             <h3 className="font-serif text-[19px] font-bold text-brand mb-3">{e.title}</h3>
             <p className="text-txt-sec text-[14px] leading-relaxed mb-4">{e.text}</p>
             {e.highlight && (
-              <NeonBtn href={waHref("Olá! Gostaria de informações sobre ABA para TEA na SEMEP.")} variant="default" size="md">Falar sobre ABA</NeonBtn>
+              <NeonBtn trackingId="especialidades__informacoes-aba" href={waHref("Olá! Gostaria de informações sobre ABA para TEA na SEMEP.")} variant="default" size="md">Falar sobre ABA</NeonBtn>
             )}
           </div>
         ))}
@@ -135,7 +135,7 @@ const ConveniosInfantilSection = () => (
         <ConvenioLogoCard name="Bradesco Saúde" className="reveal" />
       </div>
       <div className="text-center reveal">
-        <WaButton size="lg" message="Olá! Gostaria de confirmar a cobertura do meu plano para atendimento infantil na SEMEP.">Confirmar cobertura do meu plano</WaButton>
+        <WaButton trackingId="convenios__confirmar-cobertura" size="lg" message="Olá! Gostaria de confirmar a cobertura do meu plano para atendimento infantil na SEMEP.">Confirmar cobertura do meu plano</WaButton>
       </div>
     </div>
   </section>
@@ -191,7 +191,7 @@ const InfantilCTASection = () => (
           <p className="text-white/85 text-lg leading-relaxed">Tire suas dúvidas e entenda como podemos ajudar o desenvolvimento do seu filho.</p>
         </div>
         <div className="bg-white rounded-3xl p-8 shadow-card-lg flex flex-col items-center gap-4">
-          <WaButton size="lg" block message="Olá! Gostaria de falar com a equipe infantil da SEMEP.">Falar com a equipe infantil</WaButton>
+          <WaButton trackingId="cta-equipe__falar-com-equipe" size="lg" block message="Olá! Gostaria de falar com a equipe infantil da SEMEP.">Falar com a equipe infantil</WaButton>
           <p className="text-txt-sec text-[13px]">Resposta em horário comercial</p>
         </div>
       </div>

@@ -4,6 +4,82 @@ const WaNumber = "558333403562";
 const WaLink = `https://wa.me/${WaNumber}`;
 const waHref = (message = "Olá! Vim pelo site da SEMEP e gostaria de atendimento.") =>
   `${WaLink}?text=${encodeURIComponent(message)}`;
+
+// Centralized WhatsApp tracking for Google Tag Manager.
+// GTM can be installed later: events are queued in window.dataLayer meanwhile.
+const WhatsappTrackingEvent = "whatsapp_click";
+
+const cleanTrackingText = (value, fallback = "nao_identificado") => {
+  const normalized = String(value || "").replace(/\s+/g, " ").trim();
+  return (normalized || fallback).slice(0, 100);
+};
+
+const trackingSlug = (value, fallback = "nao-identificado") => {
+  const slug = cleanTrackingText(value, fallback)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return slug || fallback;
+};
+
+const whatsappTrackingLocation = (link) => {
+  const region = link.closest("[data-whatsapp-location], section, header, footer, nav, main");
+  const heading = region && region.querySelector("h1, h2, h3");
+
+  return cleanTrackingText(
+    link.dataset.whatsappLocation ||
+    (region && region.dataset.whatsappLocation) ||
+    (region && region.id) ||
+    (region && region.getAttribute("aria-label")) ||
+    (heading && heading.textContent) ||
+    (region && region.tagName.toLowerCase())
+  );
+};
+
+if (!window.__semepWhatsappTrackingInitialized) {
+  window.__semepWhatsappTrackingInitialized = true;
+  window.dataLayer = window.dataLayer || [];
+
+  document.addEventListener("click", (clickEvent) => {
+    const target = clickEvent.target;
+    if (!(target instanceof Element)) return;
+
+    const link = target.closest(
+      'a[href*="wa.me/"], a[href*="api.whatsapp.com/"], a[href*="whatsapp.com/send"]'
+    );
+    if (!link) return;
+
+    const buttonText = cleanTrackingText(
+      link.dataset.whatsappLabel || link.getAttribute("aria-label") || link.textContent
+    );
+    const buttonLocation = whatsappTrackingLocation(link);
+    const pagePath = cleanTrackingText(window.location.pathname, "/");
+    const pageName = pagePath === "/" ? "home" : trackingSlug(pagePath);
+    const phone = cleanTrackingText(new URL(link.href, window.location.href).pathname.replace(/\D/g, ""));
+    const explicitId = link.dataset.whatsappId;
+    const explicitIdSuffix = explicitId && explicitId
+      .split("__")
+      .map((segment) => trackingSlug(segment))
+      .filter(Boolean)
+      .join("__");
+
+    window.dataLayer.push({
+      event: WhatsappTrackingEvent,
+      whatsapp_click_id: (explicitIdSuffix
+        ? `${pageName}__${explicitIdSuffix}`
+        : [pageName, trackingSlug(buttonLocation), trackingSlug(buttonText)].join("__")
+      ).slice(0, 100),
+      whatsapp_button_text: buttonText,
+      whatsapp_button_location: buttonLocation,
+      whatsapp_page_path: pagePath,
+      whatsapp_page_title: cleanTrackingText(document.title),
+      whatsapp_phone: phone,
+    });
+  }, true);
+}
+
 const SEMEPLogoSrc = "/assets/logos/LOGOTIPO SEMEP SAÚDE.png";
 const SEMEPLogoHorizontalSrc = "/assets/logos/logo-semep-horizontal.png";
 
@@ -167,7 +243,7 @@ const Ic = {
 };
 
 // ── Neon Button ──────────────────────────────────────────────────────────────
-const NeonBtn = ({ children, variant = "ghost", size = "md", href, onClick, block = false, className = "", target, rel }) => {
+const NeonBtn = ({ children, variant = "ghost", size = "md", href, onClick, block = false, className = "", target, rel, trackingId, trackingLocation, trackingLabel }) => {
   const cls = `neon-btn neon-${variant} neon-${size}${block ? " neon-block" : ""} ${className}`;
   const inner = (
     <>
@@ -185,6 +261,9 @@ const NeonBtn = ({ children, variant = "ghost", size = "md", href, onClick, bloc
     <a href={href || "#"}
        target={target || (isExternal ? "_blank" : undefined)}
        rel={rel || (isExternal ? "noopener noreferrer" : undefined)}
+       data-whatsapp-id={trackingId}
+       data-whatsapp-location={trackingLocation}
+       data-whatsapp-label={trackingLabel}
        className={cls}>
       {inner}
     </a>
@@ -236,8 +315,17 @@ const ConvenioLogoCard = ({ name, size = "md", className = "" }) => {
 };
 
 // WhatsApp Button (neon-solid wrapper)
-const WaButton = ({ children, size = "md", block = false, className = "", href, message }) => (
-  <NeonBtn href={href || waHref(message)} variant="solid" size={size === "lg" ? "lg" : "md"} block={block} className={className}>
+const WaButton = ({ children, size = "md", block = false, className = "", href, message, trackingId, trackingLocation, trackingLabel }) => (
+  <NeonBtn
+    href={href || waHref(message)}
+    variant="solid"
+    size={size === "lg" ? "lg" : "md"}
+    block={block}
+    className={className}
+    trackingId={trackingId}
+    trackingLocation={trackingLocation}
+    trackingLabel={trackingLabel || (typeof children === "string" ? children : undefined)}
+  >
     <Ic.WhatsApp size={15} />{children}
   </NeonBtn>
 );
