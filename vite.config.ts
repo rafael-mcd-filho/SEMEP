@@ -65,7 +65,7 @@ const staticFiles = [
   "src/pages/infantil-page.jsx",
   "src/pages/legal-template.jsx",
   "src/pages/sobre-page.jsx",
-  "assets/images/avaliação.png",
+  "assets/images/recepcao.webp",
   "assets/images/hero-semep.jpg",
   "assets/logos/LOGOTIPO SEMEP SAÚDE.png",
   "assets/logos/bradesco.png",

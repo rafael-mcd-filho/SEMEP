@@ -70,7 +70,7 @@ const Depoimentos = () => (
         <div className="relative reveal rounded-3xl overflow-hidden">
           <img
             loading="lazy"
-            src="/assets/images/avaliação.png"
+            src="/assets/images/recepcao.webp"
             alt="Recepção SEMEP"
             className="w-full h-[400px] lg:h-[560px] object-cover"
           />
