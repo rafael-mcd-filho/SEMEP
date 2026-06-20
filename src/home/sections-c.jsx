@@ -117,7 +117,7 @@ const Depoimentos = () => (
 // ── FAQ ────────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
   { q: "Como faço para agendar uma consulta na SEMEP?",
-    a: "Você pode entrar em contato pelo nosso WhatsApp (83) 3340-3562 ou pelos telefones fixos (83) 3506-4224 ou (83) 3506-4227. Nossa equipe entende sua necessidade, confirma a cobertura do convênio e agenda com o profissional mais adequado." },
+    a: "Você pode entrar em contato pelo nosso WhatsApp (83) 3340-3562 ou pelo telefone fixo (83) 3506-4224. Nossa equipe entende sua necessidade, confirma a cobertura do convênio e agenda com o profissional mais adequado." },
   { q: "Quais convênios a SEMEP atende?",
     a: "Para atendimento adulto: Unimed, Geap, SulAmérica, Bradesco Saúde e atendimento particular. Para atendimento infantil: Bradesco Saúde e atendimento particular. A cobertura pode variar por especialidade — confirme conosco antes de agendar." },
   { q: "Qual a diferença entre o atendimento infantil e o adulto?",
@@ -228,9 +228,8 @@ const Contato = () => (
               "João Pessoa/PB · CEP 58030-150",
               "Referência: próximo ao Shopping Sebrae",
             ]} />
-            <InfoBlock icon={<Ic.Phone size={18} />} label="Telefones" lines={[
-              "WhatsApp: (83) 3340-3562",
-              "(83) 3506-4224 · (83) 3506-4227",
+            <InfoBlock icon={<Ic.Phone size={18} />} label="Telefone" lines={[
+              "(83) 3506-4224",
             ]} />
             <InfoBlock icon={<Ic.Clock size={18} />} label="Horário de Atendimento" lines={[
               "Segunda a Sexta · 08h às 18h",
@@ -311,7 +310,6 @@ const Footer = () => (
               <Ic.WhatsApp size={15} /> (83) 3340-3562
             </a>
             <div className="text-[13px] text-white/60">(83) 3506-4224</div>
-            <div className="text-[13px] text-white/60">(83) 3506-4227</div>
             <div className="flex gap-3 mt-4">
               <a href="https://www.instagram.com/semepsaudemental/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @semepsaudemental" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <Ic.Instagram size={15} className="text-white" />

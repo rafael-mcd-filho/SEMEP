@@ -358,7 +358,6 @@ const SharedFooter = () => (
           <div className="space-y-3">
             <a href={waHref("Olá! Vim pelo site da SEMEP e gostaria de atendimento.")} data-whatsapp-id="rodape__telefone-whatsapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-wa hover:text-[#5edc9e] transition-colors"><Ic.WhatsApp size={15}/>(83) 3340-3562</a>
             <div className="text-[13px] text-white/60">(83) 3506-4224</div>
-            <div className="text-[13px] text-white/60">(83) 3506-4227</div>
             <div className="flex gap-3 mt-4">
               <a href="https://www.instagram.com/semepsaudemental/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @semepsaudemental" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"><Ic.Instagram size={15} className="text-white"/></a>
             </div>

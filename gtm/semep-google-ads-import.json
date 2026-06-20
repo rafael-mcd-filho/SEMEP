@@ -1,0 +1,203 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-06-20 23:40:00",
+  "containerVersion": {
+    "path": "accounts/6361992856/containers/256105964/versions/0",
+    "accountId": "6361992856",
+    "containerId": "256105964",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/6361992856/containers/256105964",
+      "accountId": "6361992856",
+      "containerId": "256105964",
+      "name": "semepsaudemental.com.br",
+      "publicId": "GTM-MSMZLGGJ",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1781994207534",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6361992856/containers/256105964/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": false,
+        "supportBuiltInVariables": true,
+        "supportClients": false,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true,
+        "supportTransformations": false
+      },
+      "tagIds": [
+        "GTM-MSMZLGGJ"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6361992856",
+        "containerId": "256105964",
+        "tagId": "100",
+        "name": "Google Ads - WhatsApp - Conversão dinâmica",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableNewCustomerReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableProductReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableShippingData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "18206590432"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "{{JS - Google Ads - Label WhatsApp}}"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1781996473350",
+        "firingTriggerId": [
+          "100"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6361992856",
+        "containerId": "256105964",
+        "triggerId": "100",
+        "name": "CE - WhatsApp - Conversão Google Ads",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "whatsapp_click"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{JS - WhatsApp - Grupo Google Ads}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "^(geral|adulto|infantil|psiquiatria|psicologia|fonoaudiologia|nutricao|neuropsicologia)$"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1781996473350"
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "6361992856",
+        "containerId": "256105964",
+        "variableId": "100",
+        "name": "DLV - whatsapp_click_id",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "whatsapp_click_id"
+          }
+        ],
+        "fingerprint": "1781996473350",
+        "formatValue": {}
+      },
+      {
+        "accountId": "6361992856",
+        "containerId": "256105964",
+        "variableId": "101",
+        "name": "JS - WhatsApp - Grupo Google Ads",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "javascript",
+            "value": "function() {\n  var id = {{DLV - whatsapp_click_id}};\n  var groups = {\n  \"home__cabecalho-desktop__agendar\": \"geral\",\n  \"home__menu-mobile__agendar\": \"geral\",\n  \"home__hero__agendar\": \"geral\",\n  \"home__sobre__informacoes\": \"geral\",\n  \"home__como-funciona__iniciar-atendimento\": \"geral\",\n  \"home__convenios__confirmar-cobertura\": \"geral\",\n  \"home__faq__tirar-duvidas\": \"geral\",\n  \"home__contato__falar-no-whatsapp\": \"geral\",\n  \"home__rodape__telefone-whatsapp\": \"geral\",\n  \"home__botao-flutuante__falar-no-whatsapp\": \"geral\",\n  \"sobre__cabecalho-desktop__agendar\": \"geral\",\n  \"sobre__menu-mobile__agendar\": \"geral\",\n  \"sobre__cta-final__falar-no-whatsapp\": \"geral\",\n  \"sobre__rodape__telefone-whatsapp\": \"geral\",\n  \"equipe__cabecalho-desktop__agendar\": \"geral\",\n  \"equipe__menu-mobile__agendar\": \"geral\",\n  \"equipe__cta-final__falar-no-whatsapp\": \"geral\",\n  \"equipe__rodape__telefone-whatsapp\": \"geral\",\n  \"politica-de-privacidade__cabecalho-desktop__agendar\": \"geral\",\n  \"politica-de-privacidade__menu-mobile__agendar\": \"geral\",\n  \"politica-de-privacidade__rodape__telefone-whatsapp\": \"geral\",\n  \"termos-de-uso__cabecalho-desktop__agendar\": \"geral\",\n  \"termos-de-uso__menu-mobile__agendar\": \"geral\",\n  \"termos-de-uso__rodape__telefone-whatsapp\": \"geral\",\n  \"lgpd__cabecalho-desktop__agendar\": \"geral\",\n  \"lgpd__menu-mobile__agendar\": \"geral\",\n  \"lgpd__rodape__telefone-whatsapp\": \"geral\",\n  \"home__publico-adulto__informacoes\": \"adulto\",\n  \"atendimento-adulto__cabecalho-desktop__agendar\": \"adulto\",\n  \"atendimento-adulto__menu-mobile__agendar\": \"adulto\",\n  \"atendimento-adulto__hero__agendar\": \"adulto\",\n  \"atendimento-adulto__convenios__confirmar-cobertura\": \"adulto\",\n  \"atendimento-adulto__faq__tirar-duvidas\": \"adulto\",\n  \"atendimento-adulto__cta-final__falar-no-whatsapp\": \"adulto\",\n  \"atendimento-adulto__rodape__telefone-whatsapp\": \"adulto\",\n  \"home__publico-infantil__informacoes\": \"infantil\",\n  \"atendimento-infantil__cabecalho-desktop__agendar\": \"infantil\",\n  \"atendimento-infantil__menu-mobile__agendar\": \"infantil\",\n  \"atendimento-infantil__hero__agendar\": \"infantil\",\n  \"atendimento-infantil__especialidades__informacoes-aba\": \"infantil\",\n  \"atendimento-infantil__convenios__confirmar-cobertura\": \"infantil\",\n  \"atendimento-infantil__faq__tirar-duvidas\": \"infantil\",\n  \"atendimento-infantil__cta-equipe__falar-com-equipe\": \"infantil\",\n  \"atendimento-infantil__rodape__telefone-whatsapp\": \"infantil\",\n  \"equipe__profissionais__agendar-psicopedagogia\": \"infantil\",\n  \"equipe__profissionais__agendar-terapeuta-ocupacional\": \"infantil\",\n  \"equipe__profissionais__agendar-analista-aba\": \"infantil\",\n  \"psiquiatria__cabecalho-desktop__agendar\": \"psiquiatria\",\n  \"psiquiatria__menu-mobile__agendar\": \"psiquiatria\",\n  \"psiquiatria__hero__agendar\": \"psiquiatria\",\n  \"psiquiatria__convenios__confirmar-cobertura\": \"psiquiatria\",\n  \"psiquiatria__faq__tirar-duvidas\": \"psiquiatria\",\n  \"psiquiatria__cta-final__falar-no-whatsapp\": \"psiquiatria\",\n  \"psiquiatria__rodape__telefone-whatsapp\": \"psiquiatria\",\n  \"equipe__profissionais__agendar-dr-romulo-antonio\": \"psiquiatria\",\n  \"equipe__profissionais__agendar-dr-felipe-torres\": \"psiquiatria\",\n  \"psicologia__cabecalho-desktop__agendar\": \"psicologia\",\n  \"psicologia__menu-mobile__agendar\": \"psicologia\",\n  \"psicologia__hero__agendar\": \"psicologia\",\n  \"psicologia__convenios__confirmar-cobertura\": \"psicologia\",\n  \"psicologia__faq__tirar-duvidas\": \"psicologia\",\n  \"psicologia__cta-final__falar-no-whatsapp\": \"psicologia\",\n  \"psicologia__rodape__telefone-whatsapp\": \"psicologia\",\n  \"equipe__profissionais__agendar-dra-carla-medeiros\": \"psicologia\",\n  \"equipe__profissionais__agendar-psicologia-adulto\": \"psicologia\",\n  \"fonoaudiologia__cabecalho-desktop__agendar\": \"fonoaudiologia\",\n  \"fonoaudiologia__menu-mobile__agendar\": \"fonoaudiologia\",\n  \"fonoaudiologia__hero__agendar\": \"fonoaudiologia\",\n  \"fonoaudiologia__convenios__confirmar-cobertura\": \"fonoaudiologia\",\n  \"fonoaudiologia__faq__tirar-duvidas\": \"fonoaudiologia\",\n  \"fonoaudiologia__cta-final__falar-no-whatsapp\": \"fonoaudiologia\",\n  \"fonoaudiologia__rodape__telefone-whatsapp\": \"fonoaudiologia\",\n  \"equipe__profissionais__agendar-dra-ana-beatriz-silva\": \"fonoaudiologia\",\n  \"nutricao__cabecalho-desktop__agendar\": \"nutricao\",\n  \"nutricao__menu-mobile__agendar\": \"nutricao\",\n  \"nutricao__hero__agendar\": \"nutricao\",\n  \"nutricao__convenios__confirmar-cobertura\": \"nutricao\",\n  \"nutricao__faq__tirar-duvidas\": \"nutricao\",\n  \"nutricao__cta-final__falar-no-whatsapp\": \"nutricao\",\n  \"nutricao__rodape__telefone-whatsapp\": \"nutricao\",\n  \"equipe__profissionais__agendar-dra-mariana-costa\": \"nutricao\",\n  \"neuropsicologia__cabecalho-desktop__agendar\": \"neuropsicologia\",\n  \"neuropsicologia__menu-mobile__agendar\": \"neuropsicologia\",\n  \"neuropsicologia__hero__agendar\": \"neuropsicologia\",\n  \"neuropsicologia__convenios__confirmar-cobertura\": \"neuropsicologia\",\n  \"neuropsicologia__faq__tirar-duvidas\": \"neuropsicologia\",\n  \"neuropsicologia__cta-final__falar-no-whatsapp\": \"neuropsicologia\",\n  \"neuropsicologia__rodape__telefone-whatsapp\": \"neuropsicologia\",\n  \"equipe__profissionais__agendar-dr-lucas-araujo\": \"neuropsicologia\"\n};\n  return groups[id];\n}"
+          }
+        ],
+        "fingerprint": "1781996473350",
+        "formatValue": {}
+      },
+      {
+        "accountId": "6361992856",
+        "containerId": "256105964",
+        "variableId": "102",
+        "name": "JS - Google Ads - Label WhatsApp",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "javascript",
+            "value": "function() {\n  var group = {{JS - WhatsApp - Grupo Google Ads}};\n  var labels = {\n  \"geral\": \"kN8QCLCA5cIcEOCLyulD\",\n  \"adulto\": \"tpvICPOYy8IcEOCLyulD\",\n  \"infantil\": \"McOcCNGay8IcEOCLyulD\",\n  \"psiquiatria\": \"qTTsCI7M38IcEOCLyulD\",\n  \"psicologia\": \"47YGCJ6gy8IcEOCLyulD\",\n  \"fonoaudiologia\": \"X-wwCIyz5cIcEOCLyulD\",\n  \"nutricao\": \"zRPNCMChy8IcEOCLyulD\",\n  \"neuropsicologia\": \"QMbDCPC05cIcEOCLyulD\"\n};\n  return labels[group];\n}"
+          }
+        ],
+        "fingerprint": "1781996473350",
+        "formatValue": {}
+      }
+    ],
+    "fingerprint": "1781996473350"
+  }
+}

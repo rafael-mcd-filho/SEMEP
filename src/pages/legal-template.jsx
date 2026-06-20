@@ -51,7 +51,7 @@ const LEGAL = {
         ] },
       { h: '10. Contato',
         body: [
-          'Dúvidas sobre estes termos podem ser encaminhadas pelo WhatsApp (83) 3340-3562 ou pelos telefones fixos (83) 3506-4224 e (83) 3506-4227.',
+          'Dúvidas sobre estes termos podem ser encaminhadas pelo WhatsApp (83) 3340-3562 ou pelo telefone fixo (83) 3506-4224.',
         ] },
     ],
   },
@@ -169,7 +169,7 @@ const LEGAL = {
         body: [
           'Você pode contatar nosso Encarregado de Proteção de Dados pelos canais oficiais da SEMEP:',
           '• WhatsApp: (83) 3340-3562',
-          '• Telefones: (83) 3506-4224 · (83) 3506-4227',
+          '• Telefone: (83) 3506-4224',
           '• Endereço: Av. Alagoas, 435 — Bairro dos Estados, João Pessoa/PB',
           'Solicitações são analisadas em até 15 dias úteis, conforme prazo previsto em lei.',
         ] },
