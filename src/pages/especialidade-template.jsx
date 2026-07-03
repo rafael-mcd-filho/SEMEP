@@ -7,11 +7,10 @@ const CONFIGS = {
     descCurta: 'Avaliação diagnóstica e tratamento medicamentoso responsável para adultos.',
     heroImg: 'photo-1584515933487-779824d29309',
     breadcrumb: [{ href:'/', label:'Home'},{href:'/#especialidades',label:'Especialidades'},{label:'Psiquiatria'}],
-    oQueE: 'A Psiquiatria é a especialidade médica que diagnostica, trata e previne transtornos mentais e comportamentais. O psiquiatra é o médico habilitado a prescrever medicação quando indicada e a acompanhar quadros como depressão, ansiedade, transtornos bipolares, do sono e outras condições. Na SEMEP, nossos psiquiatras possuem RQE — Registro de Qualificação de Especialista.',
+    oQueE: 'A Psiquiatria é a especialidade médica que diagnostica, trata e previne transtornos mentais e comportamentais. O psiquiatra é o médico habilitado a prescrever medicação quando indicada e a acompanhar quadros como depressão, ansiedade, transtornos bipolares, do sono e outras condições. Na SEMEP, o atendimento psiquiátrico é realizado por médico com RQE — Registro de Qualificação de Especialista.',
     quando: ['Activity:Variações de humor frequentes e intensas','Moon:Distúrbios persistentes de sono','CloudRain:Depressão e tristeza prolongada','Zap:Ansiedade e crises de pânico','Users:Histórico familiar de transtornos','AlertTriangle:Ideação suicida ou pensamentos difíceis'],
     profissionais: [
       { name:'Dr. Rômulo Antônio', role:'Psiquiatra', reg:'CRM/PB 3442 · RQE 5994', img:'photo-1612349317150-e413f6a5b16d' },
-      { name:'Dr. Felipe Torres',  role:'Psiquiatria Infantil', reg:'CRM/PB 5118 · RQE 7203', img:'photo-1506794778202-cad84cf45f1d' },
     ],
     convenios: ['Unimed','Geap','SulAmérica','Bradesco Saúde','Particular'],
     faq: [

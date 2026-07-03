@@ -459,7 +459,9 @@ https://semepsaudemental.com.br/psiquiatria
 
 ### Público principal comunicado
 
-O card da página inicial classifica Psiquiatria como **apenas adulto**. Entretanto, a página da especialidade também lista um profissional de Psiquiatria Infantil. Essa divergência deve ser resolvida antes de campanhas específicas para Psiquiatria Infantil.
+O site foi alinhado para comunicar Psiquiatria como oferta **apenas adulta**. A menção pública a Psiquiatria Infantil foi removida das páginas de Psiquiatria, Atendimento Infantil, Equipe e prévia de equipe da Home.
+
+Campanhas ou grupos de anúncios de **Psiquiatria Infantil** não devem ser ativados até confirmação formal de profissional, vínculo, registro/RQE, agenda, convênios, página de destino e mensuração própria.
 
 ### Descrição do serviço
 
@@ -858,7 +860,6 @@ O site não divulga valores. A orientação publicada é entrar em contato para 
 |---|---|---|---|
 | Dr. Rômulo Antônio | Psiquiatria | CRM/PB 3442 · RQE 5994 | É também o responsável técnico divulgado; ainda assim, validar dados atuais |
 | Dra. Carla Medeiros | Psicologia Clínica | CRP 13/0847 | **[CONFIRMAR]** identidade, vínculo, registro e agenda |
-| Dr. Felipe Torres | Psiquiatria Infantil | CRM/PB 5118 · RQE 7203 | **[CONFIRMAR]** identidade, vínculo, registro e agenda |
 | Dra. Ana Beatriz Silva / Dra. Ana Beatriz | Fonoaudiologia | CRFa/PB 2241 | **[CONFIRMAR]** nome completo, vínculo, registro e agenda |
 | Dra. Mariana Costa | Nutrição | CRN/PB 9034 | **[CONFIRMAR]** identidade, vínculo, registro e agenda |
 | Dr. Lucas Araújo | Neuropsicologia | CRP 13/1562 | **[CONFIRMAR]** identidade, vínculo, registro e agenda |
@@ -990,7 +991,7 @@ Esses textos ajudam a entender o foco de cada página e podem servir como insumo
 
 | URL | Título HTML | Descrição publicada |
 |---|---|---|
-| `/` | SEMEP — Saúde Mental & Bem-Estar \| João Pessoa, PB | Clínica de saúde mental em João Pessoa/PB. Psiquiatria, Psicologia, Fonoaudiologia, Nutrição e Neuropsicologia para crianças, adolescentes e adultos. |
+| `/` | SEMEP — Saúde Mental & Bem-Estar \| João Pessoa, PB | Clínica de saúde mental em João Pessoa/PB. Atendimento adulto em Psiquiatria, Psicologia, Nutrição e Neuropsicologia; infantil com equipe multidisciplinar. |
 | `/atendimento-adulto` | Atendimento Adulto — SEMEP \| João Pessoa, PB | Atendimento adulto integral na SEMEP: Psiquiatria, Psicologia, Nutrição e Neuropsicologia. João Pessoa/PB. |
 | `/atendimento-infantil` | Atendimento Infantil — SEMEP \| João Pessoa, PB | Atendimento infantil e adolescente especializado: ABA para TEA, Psicomotricidade, Fonoaudiologia, Psicologia e mais. |
 | `/equipe` | Nossa Equipe — SEMEP \| João Pessoa, PB | Equipe multidisciplinar: psiquiatras, psicólogos, fonoaudiólogos, nutricionistas e neuropsicólogos. |
@@ -1488,7 +1489,7 @@ O mapeamento atual classifica:
 - 27 IDs como Geral;
 - 8 como Adulto;
 - 12 como Infantil;
-- 9 como Psiquiatria;
+- 8 como Psiquiatria;
 - 9 como Psicologia;
 - 8 como Fonoaudiologia;
 - 8 como Nutrição;
@@ -1572,7 +1573,7 @@ Como a clínica não oferece urgência psiquiátrica nem internação, anúncios
 
 1. **Equipe provisória:** existem nomes entre colchetes e fotos de banco;
 2. **Registros profissionais:** validar cada nome, conselho, número, especialidade e vínculo;
-3. **Psiquiatria infantil:** Home diz “apenas adulto”, mas a página lista Psiquiatria Infantil;
+3. **Psiquiatria infantil:** não está divulgada como oferta ativa; só expandir campanha após confirmação formal de profissional, agenda, convênios e landing page;
 4. **Quantidade de avaliações:** o site alterna entre +250 e 255;
 5. **Nota no Google:** cinco estrelas aparecem visualmente, mas a nota atual precisa ser verificada;
 6. **Convênios:** confirmar cobertura por profissional, especialidade, procedimento e categoria do plano;
@@ -1673,7 +1674,7 @@ Para transformar este briefing em uma campanha de alta qualidade, solicitar à S
 - [ ] corrigir equipe provisória;
 - [ ] revisar convênios;
 - [ ] revisar avaliações e provas sociais;
-- [ ] revisar Psiquiatria Infantil versus “apenas adulto”;
+- [ ] confirmar formalmente Psiquiatria Infantil antes de criar campanha ou grupo específico;
 - [ ] verificar velocidade e experiência mobile;
 - [ ] garantir que política de privacidade esteja acessível.
 

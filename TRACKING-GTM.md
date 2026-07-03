@@ -113,7 +113,6 @@ Exemplo: `psiquiatria__hero__agendar`.
 | Menu mobile | `equipe__menu-mobile__agendar` |
 | Dr. Rômulo Antônio | `equipe__profissionais__agendar-dr-romulo-antonio` |
 | Dra. Carla Medeiros | `equipe__profissionais__agendar-dra-carla-medeiros` |
-| Dr. Felipe Torres | `equipe__profissionais__agendar-dr-felipe-torres` |
 | Dra. Ana Beatriz Silva | `equipe__profissionais__agendar-dra-ana-beatriz-silva` |
 | Dra. Mariana Costa | `equipe__profissionais__agendar-dra-mariana-costa` |
 | Dr. Lucas Araújo | `equipe__profissionais__agendar-dr-lucas-araujo` |

@@ -23,7 +23,7 @@ const HeroInfantil = () => (
           <div className="hero-blob-turq absolute w-[340px] h-[380px] top-4 right-0 hidden lg:block" />
           <div className="relative z-10 lg:mr-4">
             <img loading="lazy" src="/assets/images/hero-semep.jpg"
-                 alt="Dr. Rômulo Antônio, psiquiatra da SEMEP" className="w-full max-w-[320px] lg:w-[320px] h-[380px] object-cover object-top rounded-[28px]" />
+                 alt="Imagem institucional da SEMEP" className="w-full max-w-[320px] lg:w-[320px] h-[380px] object-cover object-top rounded-[28px]" />
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const AbordagemInfantilSection = () => (
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal rounded-3xl overflow-hidden shadow-card">
           <img loading="lazy" src="/assets/images/hero-semep.jpg"
-               alt="Dr. Rômulo Antônio, psiquiatra da SEMEP" className="w-full h-[420px] object-cover object-top" />
+               alt="Imagem institucional da SEMEP" className="w-full h-[420px] object-cover object-top" />
         </div>
         <div className="reveal reveal-d2">
           <Badge className="bg-brand/10 text-brand mb-5">Nossa Abordagem</Badge>
@@ -142,7 +142,6 @@ const ConveniosInfantilSection = () => (
 );
 
 const EQUIPE_INFANTIL = [
-  { name: 'Dr. Felipe Torres',        role: 'Psiquiatria Infantil',  reg: 'CRM/PB 5118 · RQE 7203', img: 'photo-1506794778202-cad84cf45f1d' },
   { name: 'Dra. Ana Beatriz Silva',   role: 'Fonoaudiologia',        reg: 'CRFa/PB 2241',            img: 'photo-1544005313-94ddf0286df2' },
   { name: 'Dra. [Psicopedagoga]',     role: 'Psicopedagogia',        reg: 'CRPP/PB —',               img: 'photo-1438761681033-6461ffad8d80' },
   { name: 'Dra. [Terapeuta Ocup.]',   role: 'Terapia Ocupacional',   reg: 'CREFITO/PB —',            img: 'photo-1494790108377-be9c29b29330' },
@@ -155,7 +154,7 @@ const EquipeInfantilSection = () => (
         <SectionHeader badge="Equipe Infantil" title="Profissionais especializados em desenvolvimento infantil"
           subtitle="Equipe com formação específica para crianças e adolescentes." />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
         {EQUIPE_INFANTIL.map((doc, i) => (
           <div key={doc.name} className={`reveal reveal-d${i+1}`}><SharedDoctorCard doc={doc} /></div>
         ))}
@@ -171,7 +170,7 @@ const FAQ_INFANTIL = [
   { q: 'Meu filho tem diagnóstico de TEA. Como funciona o atendimento na SEMEP?',
     a: 'Trabalhamos com Abordagem ABA estruturada, integrada com fonoaudiologia, terapia ocupacional, psicopedagogia e neuropsicologia conforme necessidade. Começamos por uma avaliação detalhada para construir o plano terapêutico individualizado, em parceria com a família.' },
   { q: 'Como funciona a primeira avaliação?',
-    a: 'A primeira consulta é com profissional indicado conforme o motivo da procura (psicólogo, psiquiatra ou neuropsicólogo, dependendo do caso). Após a avaliação inicial, indicamos o plano terapêutico e as especialidades envolvidas.' },
+    a: 'A primeira consulta é com profissional indicado conforme o motivo da procura e a disponibilidade da equipe. Após a avaliação inicial, indicamos o plano terapêutico e as especialidades envolvidas.' },
   { q: 'Vocês emitem laudo para escola, INSS ou perícia?',
     a: 'Sim. Após avaliação completa, emitimos laudos técnicos com fundamentação clínica para uso escolar, previdenciário ou jurídico, conforme demanda.' },
   { q: 'Qual a frequência das sessões para crianças com TEA?',

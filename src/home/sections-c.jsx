@@ -4,7 +4,6 @@
 const TEAM = [
   { name: "Dr. Rômulo Antônio",  role: "Psiquiatra",          reg: "CRM/PB 3442 · RQE 5994", img: "photo-1612349317150-e413f6a5b16d" },
   { name: "Dra. Carla Medeiros", role: "Psicóloga Clínica",   reg: "CRP 13/0847",             img: "photo-1438761681033-6461ffad8d80" },
-  { name: "Dr. Felipe Torres",   role: "Psiquiatra Infantil", reg: "CRM/PB 5118 · RQE 7203",  img: "photo-1506794778202-cad84cf45f1d" },
   { name: "Dra. Ana Beatriz",    role: "Fonoaudióloga",       reg: "CRFa/PB 2241",            img: "photo-1544005313-94ddf0286df2" },
   { name: "Dra. Mariana Costa",  role: "Nutricionista",       reg: "CRN/PB 9034",             img: "photo-1494790108377-be9c29b29330" },
   { name: "Dr. Lucas Araújo",    role: "Neuropsicólogo",      reg: "CRP 13/1562",             img: "photo-1472099645785-5658abf4ff4e" },
